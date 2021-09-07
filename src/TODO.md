@@ -1,2 +1,2 @@
 - 内置函数： reverse
-- 自动代码格式化，代码风格（style guide）
+- 自动代码格式化，代码风格（style guide）,lint
