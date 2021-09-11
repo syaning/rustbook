@@ -13,4 +13,6 @@
 	- [String](./data_structure/string.md)
 - [Ownership](./ownership/README.md)
 	- [Ownership](./ownership/ownership.md)
+	- [引用和借用](./ownership/references_and_borrowing.md)
+	- [Slice](./ownership/slice.md)
 - [Struct](./struct/README.md)
