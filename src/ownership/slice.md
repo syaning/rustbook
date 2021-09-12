@@ -10,5 +10,4 @@ fn main() {
     let s2 = &s[6..];
     println!("{} {}", s1, s2); // hello world
 }
-
 ```
