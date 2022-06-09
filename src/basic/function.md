@@ -25,6 +25,10 @@ fn main() {
 }
 ```
 
+> 特别注意：
+> - `3 + 2` 是一个表达式，返回一个值为 `5`
+> - `3 + 2;` 是一个语句，没有返回值
+
 ## 参数
 
 - 参数必须指定类型
@@ -72,5 +76,35 @@ fn main() {
     println!("{} / {} = {}", a, b, div);    // 3 / 2 = 1
     println!("{} % {} = {}", a, b, modulo); // 3 % 2 = 1
     println!("max({}, {}) = {}", a, b, m);  // max(3, 2) = 3
+}
+```
+
+例如下面例子，由于 `a + b;` 是一个语句，因此 `add` 函数并没有 `i32` 类型的返回值，从而导致编译报错：
+
+```rust
+fn add(a: i32, b: i32) -> i32 {
+    a + b;
+}
+
+fn main() {
+    let a = 3;
+    let b = 2;
+    let sum = add(a, b);
+    println!("{} + {} = {}", a, b, sum);
+}
+```
+
+实际上返回值是 unit value：
+
+```rust
+fn add(a: i32, b: i32) {
+    a + b;
+}
+
+fn main() {
+    let a = 3;
+    let b = 2;
+    let sum = add(a, b);
+    println!("{} + {} = {:?}", a, b, sum); // 3 + 2 = ()
 }
 ```
